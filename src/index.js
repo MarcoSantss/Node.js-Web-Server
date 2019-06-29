@@ -16,8 +16,8 @@ app.use(express.static(staticSource)); //Setup static directory to serve
 app.get("", async (req, res) => {
   res.render("index", {
     title: "Cats!",
-    value: 5.0,
-    cat: "Cat"
+    age: 5,
+    catName: "San"
   });
 });
 
