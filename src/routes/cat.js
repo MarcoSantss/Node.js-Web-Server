@@ -1,8 +1,9 @@
 const express = require("express");
+const { validatesNothing } = require("./../middlewares");
 
 const catRouter = new express.Router();
 
-catRouter.get("", async (req, res) => {
+catRouter.get("", validatesNothing, async (req, res) => {
   res.render("index", {
     title: "Cats!",
     age: 5,
